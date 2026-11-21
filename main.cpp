@@ -10,6 +10,8 @@ double ceny[5] = {70, 100, 85, 45, 250};
 
 int main(){
         int wybor;
+        vector<string>NazwyProd;
+        vector<double>CenaProd;
 
         while (true) {
             cout << "---Sklep Online---"<<endl;
@@ -21,7 +23,6 @@ int main(){
             cout << "6.Wyjdź" << endl;
             cin >> wybor;
             switch (wybor) {
-
                 case 1: {
                     cout<<"Zawartość Sklepu: " << endl;
                     for  (int i = 0 ; i < 5 ;i++ ) {
@@ -29,9 +30,27 @@ int main(){
                     }
                     break;}
                 case 2: {
-
+                    int addItem;
+                    cout << "Dodaj przedmiot (1-5) do koszyka:  : " <<endl;
+                    cin >> addItem;
+                    if (addItem > 5 || addItem < 1) {
+                        cout << "Nie poprawny zakres!!! wybierz spośród (1-5)!!!"<<endl;
+                    }else {
+                        NazwyProd.push_back(produkty[addItem - 1]);
+                        CenaProd.push_back(ceny[addItem - 1]);
+                        cout << "Dodano Produkt do koszyka!!"<<endl;
+                    }
                     break;
                 }
+                case 3:
+                    if (NazwyProd.empty()) {
+                        cout << "Koszyk jest pusty!! Dodaj cos do niego!!" <<endl;
+                    }else {
+                        cout << "Zawartość koszyka: "   << endl;
+                    }
+
+
+                    break;
 
 
 
