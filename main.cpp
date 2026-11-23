@@ -46,13 +46,37 @@ int main(){
                     if (NazwyProd.empty()) {
                         cout << "Koszyk jest pusty!! Dodaj cos do niego!!" <<endl;
                     }else {
+                        double suma = 0;
                         cout << "Zawartość koszyka: "   << endl;
+                        for (int i = 0; i < NazwyProd.size(); i++) {
+                            cout <<  i + 1  << " " <<  NazwyProd[i] << " cena: " << CenaProd[i] << " zł" << endl;
+                            suma += CenaProd[i];
+                        }
+                        cout << "Całkowita suma(zł) koszyka: " << suma <<endl;
                     }
-
-
                     break;
 
-
+                case 4:
+                    if (NazwyProd.empty()) {
+                        cout << "Nie masz aktualnie zadnych rzeczy dodanych!!!" << endl;
+                    }else {
+                       cout << "Usunięto z koszyka: " << NazwyProd.back() << endl;
+                        NazwyProd.pop_back();
+                        CenaProd.pop_back();
+                    }
+                    break;
+                case 5:
+                    if (NazwyProd.empty()) {
+                        cout << "Brak czegokolwiek w koszyku dodaj coś przed finalizacją!!!"<<endl;
+                    }else {
+                        double suma = 0;
+                        double MaxCena = CenaProd[0];
+                        string NazwaMax = NazwyProd[0];
+                        for (int i = 0; i < NazwyProd.size(); i++ ) {
+                            cout <<
+                        }
+                    }
+                    break;
 
 
                 case 6:
