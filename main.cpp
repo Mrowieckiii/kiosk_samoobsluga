@@ -70,11 +70,14 @@ int main(){
                         cout << "Brak czegokolwiek w koszyku dodaj coś przed finalizacją!!!"<<endl;
                     }else {
                         double suma = 0;
-                        double MaxCena = CenaProd[0];
-                        string NazwaMax = NazwyProd[0];
+                      //  double MaxCena = CenaProd[0];
+                      //  string NazwaMax = NazwyProd[0];
                         for (int i = 0; i < NazwyProd.size(); i++ ) {
-                            cout <<
+                            cout << i + 1 <<  " " <<  NazwyProd[i] <<  " cena: " <<  CenaProd[i] << "zl" << "\n";
+                             suma += CenaProd[i];
                         }
+                        cout << "Suma calkowita: " << suma << " zł" << endl;
+                        return 0;
                     }
                     break;
 
